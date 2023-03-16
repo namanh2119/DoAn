@@ -14,7 +14,9 @@ function Header() {
                     <ul className={cx('header__list')}>
                         {lists.map((list, index) => (
                             <li key={index} className={cx('header__list-item')}>
-                                {list}
+                                <a href="" className={cx('item__link')}>
+                                    {list}
+                                </a>
                             </li>
                         ))}
                     </ul>

@@ -1,0 +1,64 @@
+:root {
+    --nav-height: 86px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    box-shadow: 2px 4px 32px #ebebeb;
+    width: 100%;
+    background: var(--black);
+}
+
+.header__content {
+    display: flex;
+    height: var(--nav-height);
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.header__left {
+    display: flex;
+}
+
+.logo {
+    // background-image: url('/CaNhan/assets/img/logo.png');
+    background-size: cover;
+    width: 80px;
+    height: 30px;
+    margin: auto 0;
+    background-size: cover;
+}
+
+.header__list {
+    display: flex;
+    list-style: none;
+    padding-left: 30px;
+    margin: 0;
+}
+
+.item__link {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 650;
+    color: #252525;
+    padding: 0 10px;
+    line-height: 100%;
+    height: 100%;
+    align-items: center;
+
+    &:hover {
+        zoom: 1.1;
+    }
+}
+
+.header__right {
+    margin: auto 0;
+    font-size: 24px;
+}
+
+.link {
+    color: #252525;
+}
