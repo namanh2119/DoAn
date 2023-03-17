@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Header.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 function Header() {
@@ -21,7 +22,14 @@ function Header() {
                         ))}
                     </ul>
                 </div>
-                <div className={cx('header__right')}></div>
+                <div className={cx('header__right')}>
+                    <a className={cx('link')}>
+                        <FontAwesomeIcon icon={faCartShopping} />
+                    </a>
+                    <a className={cx('link')}>
+                        <FontAwesomeIcon icon={faUser} />
+                    </a>
+                </div>
             </div>
         </header>
     );
