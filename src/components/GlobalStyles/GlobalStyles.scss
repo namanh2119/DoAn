@@ -1,10 +1,12 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
 :root {
     --white: #fff;
     --black: #000;
     --text-color: #333;
+    --primary-color: #5297ff;
+    --secondary-color: #ffe151;
 
     --nav-height: 86px;
     --padding-section: 60px;
@@ -21,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
@@ -37,8 +39,4 @@ input,
 a[href] {
     color: var(--text-color);
     text-decoration: none;
-}
-
-.container {
-    min-height: calc(100vh - 160px);
 }

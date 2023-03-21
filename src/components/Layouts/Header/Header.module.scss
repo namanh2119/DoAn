@@ -4,14 +4,17 @@
     z-index: 1;
     box-shadow: 2px 4px 32px #ebebeb;
     width: 100%;
-    background: var(--black);
+    background-color: var(--white);
 }
 
 .header__content {
     display: flex;
     height: var(--nav-height);
     justify-content: space-between;
-    margin: 0 auto;
+
+    a {
+        font-size: 2.4rem;
+    }
 }
 
 .header__left {
@@ -38,8 +41,8 @@
     display: flex;
     text-decoration: none;
     font-size: 18px;
-    font-weight: 650;
-    color: var(--white);
+    font-weight: 700;
+    color: var(--text-color);
     padding: 0 10px;
     line-height: 100%;
     height: 100%;
@@ -47,6 +50,7 @@
 
     &:hover {
         zoom: 1.1;
+        color: #252525;
     }
 }
 
@@ -56,7 +60,7 @@
 }
 
 .link {
-    color: var(--white);
+    color: var(--text-color);
 
     &:last-child {
         padding: 0 16px;
