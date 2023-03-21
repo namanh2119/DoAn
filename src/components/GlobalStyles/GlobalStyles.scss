@@ -5,8 +5,8 @@
     --white: #fff;
     --black: #000;
     --text-color: #333;
-    --primary-color: #5297ff;
-    --secondary-color: #ffe151;
+    --primary-color: #c0e47d;
+    --secondary-color: #feeab8;
 
     --nav-height: 86px;
     --padding-section: 60px;
@@ -39,4 +39,19 @@ input,
 a[href] {
     color: var(--text-color);
     text-decoration: none;
+}
+
+.title {
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0;
+}
+
+.text {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: lighter;
+    margin-top: 12px;
+    margin-bottom: 0;
 }

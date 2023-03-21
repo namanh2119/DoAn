@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
+import logo from '../../../assets/logo.png';
 
 function Header() {
     const lists = ['Trang chủ', 'Món ăn', 'Đồ uống', 'Liên hệ'];
@@ -12,7 +13,9 @@ function Header() {
             <div className={cx('grid wide')}>
                 <div className={cx('header__content')}>
                     <div className={cx('header__left')}>
-                        <div className={cx('logo')}></div>
+                        <a href="" className={cx('logo')}>
+                            <img src={logo} />
+                        </a>
                         <ul className={cx('header__list')}>
                             {lists.map((list, index) => (
                                 <li key={index} className={cx('header__list-item')}>
