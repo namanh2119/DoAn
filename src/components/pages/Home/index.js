@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import khachhang from '../../../assets/images/khachhang.png';
 import sanpham from '../../../assets/images/sanpham.png';
 import tuvan from '../../../assets/images/tuvan.png';
+import Product from '../../Layouts/Product';
 
 const cx = classNames.bind(styles);
 const missions = [
@@ -70,7 +71,15 @@ function Home() {
                     <div className={cx('grid wide')}>
                         <h3 className={cx('section-title')}>Thức ăn ưa thích</h3>
                         <div className={cx('row t-1')}>
-                            <div className={cx('col l-4')}></div>
+                            <div className={cx('col l-4')}>
+                                <Product />
+                            </div>
+                            <div className={cx('col l-4')}>
+                                <Product />
+                            </div>
+                            <div className={cx('col l-4')}>
+                                <Product />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,7 +89,15 @@ function Home() {
                 <div className={cx('grid wide')}>
                     <h3 className={cx('section-title')}>Đồ uống nổi bật</h3>
                     <div className={cx('row t-1')}>
-                        <div className={cx('col l-4')}></div>
+                        <div className={cx('col l-4')}>
+                            <Product />
+                        </div>
+                        <div className={cx('col l-4')}>
+                            <Product />
+                        </div>
+                        <div className={cx('col l-4')}>
+                            <Product />
+                        </div>
                     </div>
                 </div>
             </div>
