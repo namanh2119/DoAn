@@ -5,7 +5,7 @@ const cx = classNames.bind(styles);
 
 function Contact() {
     return (
-        <div className={cx('contact__content')}>
+        <div className={cx('contact__content', 'grid', 'wide')}>
             <div className={cx('row')}>
                 <div className={cx('col l-6 t-1')}>
                     <div className={cx('form')}>

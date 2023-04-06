@@ -1,6 +1,7 @@
 import { publicRoutes } from './components/router';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DefaultLayout from './components/Layouts/DefaultLayout';
+import Login from './components/Layouts/Login';
 
 function App() {
     return (

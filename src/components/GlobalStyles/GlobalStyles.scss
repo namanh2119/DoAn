@@ -57,8 +57,7 @@ a[href] {
 }
 
 .products {
-    padding-top: var(--padding-section);
-    padding-bottom: var(--padding-section);
+    padding: var(--padding-section) 0 !important;
 }
 
 /* Start Filter */

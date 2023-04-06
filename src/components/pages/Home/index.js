@@ -28,12 +28,12 @@ const missions = [
 
 function Home() {
     return (
-        <div className={cx('home__content')}>
-            <div className={cx('slider')}>
-                <div className={cx('grid wide')}>
-                    <div className={cx('row t-1')}>
-                        <div className={cx('slider__text')}>
-                            <div className={cx('col l-6')}>
+        <div>
+            <div className={cx('home__content')}>
+                <div className={cx('slider')}>
+                    <div className={cx('grid', 'wide')}>
+                        <div className={cx('row t-1')}>
+                            <div className={cx('slider__text', 'col', 'l-6')}>
                                 <h2 className={cx('title')}>Đưa nghệ thuật vào trong những món ăn</h2>
                                 <p className={cx('text')}>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh non egestas neque ante
@@ -45,10 +45,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className={cx('mission')}>
-                <div className={cx('grid wide')}>
+                <div className={cx('mission', 'grid', 'wide')}>
                     <h3 className={cx('section-title')}>Định hướng</h3>
                     <div className={cx('mission__list row')}>
                         {missions.map((mission, index) => (
@@ -64,29 +61,26 @@ function Home() {
                         ))}
                     </div>
                 </div>
-            </div>
-
-            <div className={cx('product__food')}>
-                <div className={cx('product')}>
-                    <div className={cx('grid wide')}>
-                        <h3 className={cx('section-title')}>Thức ăn ưa thích</h3>
-                        <div className={cx('row t-1')}>
-                            <div className={cx('col l-4')}>
-                                <Product />
-                            </div>
-                            <div className={cx('col l-4')}>
-                                <Product />
-                            </div>
-                            <div className={cx('col l-4')}>
-                                <Product />
+                <div className={cx('product__food')}>
+                    <div className={cx('product')}>
+                        <div className={cx('product', 'grid', 'wide')}>
+                            <h3 className={cx('section-title')}>Thức ăn ưa thích</h3>
+                            <div className={cx('row', 't-1')}>
+                                <div className={cx('col l-4')}>
+                                    <Product />
+                                </div>
+                                <div className={cx('col l-4')}>
+                                    <Product />
+                                </div>
+                                <div className={cx('col l-4')}>
+                                    <Product />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div className={cx('product')}>
-                <div className={cx('grid wide')}>
+                <div className={cx('product', 'grid', 'wide')}>
                     <h3 className={cx('section-title')}>Đồ uống nổi bật</h3>
                     <div className={cx('row t-1')}>
                         <div className={cx('col l-4')}>

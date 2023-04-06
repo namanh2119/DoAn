@@ -42,6 +42,11 @@
     flex-grow: 1;
 }
 
+.item__link.active {
+    color: var(--black);
+    zoom: 1.05;
+}
+
 .item__link {
     position: relative;
     display: flex;
@@ -61,10 +66,19 @@
 .header__right {
     margin: auto 0;
     font-size: 24px;
+
+    a {
+        cursor: pointer;
+        color: var(--text-color);
+    }
 }
 
 .link {
     &:last-child {
         padding: 0 16px;
+        background-color: transparent;
+        font-size: 2.4rem;
+        color: var(--text-color);
+        cursor: pointer;
     }
 }
