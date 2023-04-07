@@ -1,5 +1,5 @@
 import './GlobalStyles.scss';
-import './boottrap.scss';
+import './bootstrap.scss';
 
 function GlobalStyles({ children }) {
     return children;

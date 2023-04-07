@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 function Product() {
     return (
         <div className={cx('product__item')}>
-            <div className={cx('product__image')}></div>
+            <img className={cx('product__image')}></img>
             <div className={cx('product__info')}>
                 <div className={cx('product__name')}>Suất Cơm sườn nấu niêu</div>
                 <div className={cx('product__price')}>Giá: 120.000đ</div>

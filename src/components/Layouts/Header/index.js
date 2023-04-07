@@ -15,6 +15,11 @@ function Header() {
         setLogin((curr) => !curr);
     };
 
+    const [page, setPage] = useState(1);
+    const togglePage = (index) => {
+        setPage(index);
+    };
+
     return (
         <header className={cx('header')}>
             <div className={cx('grid wide')}>
@@ -25,22 +30,38 @@ function Header() {
                         </Link>
                         <ul className={cx('header__list')}>
                             <li className={cx('header__list-item')}>
-                                <NavLink to="/" className={cx('item__link')}>
+                                <NavLink
+                                    to="/"
+                                    className={cx('item__link', page === 1 ? 'active' : '')}
+                                    onClick={() => togglePage(1)}
+                                >
                                     Trang chủ
                                 </NavLink>
                             </li>
                             <li className={cx('header__list-item')}>
-                                <NavLink to="/food" className={cx('item__link')}>
+                                <NavLink
+                                    to="/food"
+                                    className={cx('item__link', page === 2 ? 'active' : '')}
+                                    onClick={() => togglePage(2)}
+                                >
                                     Món ăn
                                 </NavLink>
                             </li>
                             <li className={cx('header__list-item')}>
-                                <NavLink to="/drink" className={cx('item__link')}>
+                                <NavLink
+                                    to="/drink"
+                                    className={cx('item__link', page === 3 ? 'active' : '')}
+                                    onClick={() => togglePage(3)}
+                                >
                                     Đồ uống
                                 </NavLink>
                             </li>
                             <li className={cx('header__list-item')}>
-                                <NavLink to="/contact" className={cx('item__link')}>
+                                <NavLink
+                                    to="/contact"
+                                    className={cx('item__link', page === 4 ? 'active' : '')}
+                                    onClick={() => togglePage(4)}
+                                >
                                     Liên hệ
                                 </NavLink>
                             </li>
