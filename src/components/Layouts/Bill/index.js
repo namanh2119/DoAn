@@ -5,7 +5,7 @@ const cx = classNames.bind(styles);
 
 function Bill() {
     return (
-        <div className={cx('bill', 'open')}>
+        <div className={cx('bill')}>
             <div className={cx('modal-overlay')}></div>
             <div className={cx('bill-form')}>
                 <div className={cx('form-header')}>
