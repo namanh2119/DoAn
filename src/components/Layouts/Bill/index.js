@@ -3,10 +3,10 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-function Bill() {
+function Bill({ bill, handleBill }) {
     return (
-        <div className={cx('bill')}>
-            <div className={cx('modal-overlay')}></div>
+        <div className={cx('bill', bill ? 'open' : '')}>
+            <div className={cx('modal-overlay')} onClick={handleBill}></div>
             <div className={cx('bill-form')}>
                 <div className={cx('form-header')}>
                     <span className={cx('title-header')}>Thông tin người nhận</span>
@@ -22,7 +22,7 @@ function Bill() {
                     <div className={cx('button-bill')}>
                         <button>Tài khoản ngân hàng</button>
                         <button>Bằng tiền mặt khi nhận hàng</button>
-                        <button>Hủy</button>
+                        <button onClick={handleBill}>Hủy</button>
                     </div>
                 </div>
             </div>

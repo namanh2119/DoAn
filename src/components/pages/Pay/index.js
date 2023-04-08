@@ -1,10 +1,16 @@
 import classNames from 'classnames/bind';
 import styles from './Pay.module.scss';
 import Bill from '../../Layouts/Bill';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 function Pay() {
+    const [bill, setBill] = useState(false);
+    const handleBill = () => {
+        setBill((curr) => !curr);
+    };
+
     return (
         <div className={cx('pay', 'grid', 'wide')}>
             <div className={cx('pay__content', 'row', 'col')}>
@@ -33,10 +39,12 @@ function Pay() {
                         <span>Tổng số tiền cần thanh toán:</span>
                         <span className={cx('result__price')}>120000đ</span>
                     </div>
-                    <button className={cx('l-2')}>Thanh toán</button>
+                    <button className={cx('l-2')} onClick={handleBill}>
+                        Thanh toán
+                    </button>
                 </div>
             </div>
-            <Bill />
+            <Bill bill={bill} handleBill={handleBill} />
         </div>
     );
 }
