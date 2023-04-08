@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Pay.module.scss';
+import Bill from '../../Layouts/Bill';
 
 const cx = classNames.bind(styles);
 
@@ -35,6 +36,7 @@ function Pay() {
                     <button className={cx('l-2')}>Thanh toán</button>
                 </div>
             </div>
+            <Bill />
         </div>
     );
 }
