@@ -65,8 +65,11 @@
 }
 
 .header__right {
+    position: relative;
     margin: auto 0;
     font-size: 24px;
+    display: flex;
+    align-items: center;
 
     a {
         cursor: pointer;
@@ -74,12 +77,84 @@
     }
 }
 
-.link {
-    &:last-child {
-        padding: 0 16px;
+.user {
+    display: none;
+    padding: 0 16px;
+    background-color: transparent;
+    font-size: 2.4rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.user.open {
+    display: block;
+}
+
+.user__login {
+    &:hover {
+        .user__info {
+            display: block;
+        }
+    }
+}
+
+.avatar {
+    display: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: 0 16px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.avatar.open {
+    display: block;
+}
+
+.user__info {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 12px;
+    background-color: var(--white);
+    padding: 12px;
+    width: 124px;
+    box-shadow: 2px 4px 32px #ffeeda;
+    border-radius: 4px;
+
+    &::before {
+        content: '';
+        border-width: 16px 20px;
+        position: absolute;
+        border-style: solid;
+        border-color: transparent transparent var(--white) transparent;
+        top: -24px;
+        right: 2px;
+    }
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 20px;
         background-color: transparent;
-        font-size: 2.4rem;
-        color: var(--text-color);
+        position: absolute;
+        top: -8px;
+        right: 0;
+    }
+
+    span {
+        display: block;
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    button {
+        padding: 12px;
+        width: 100%;
+        border-radius: 12px;
         cursor: pointer;
+        background-color: var(--secondary-color);
     }
 }

@@ -1,5 +1,6 @@
 {
     "name": "do_an_web_ban_hang",
+    "homepage": "https://namanh2119.github.io/do_an_web_ban_hang/",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -26,9 +27,12 @@
     "devDependencies": {
         "babel-plugin-module-resolver": "^5.0.0",
         "customize-cra": "^1.0.0",
+        "gh-pages": "^5.0.0",
         "react-app-rewired": "^2.2.1"
     },
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",

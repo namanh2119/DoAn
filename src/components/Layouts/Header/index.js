@@ -71,9 +71,16 @@ function Header() {
                         <Link to="/pay" className={cx('link')}>
                             <FontAwesomeIcon icon={faCartShopping} />
                         </Link>
-                        <button className={cx('link')} onClick={handleLogin}>
+                        <button className={cx('user')} onClick={handleLogin}>
                             <FontAwesomeIcon icon={faUser} />
                         </button>
+                        <div className={cx('user__login')}>
+                            <img src="" className={cx('avatar', 'open')} />
+                            <div className={cx('user__info')}>
+                                <span>Hoàng Nam</span>
+                                <button>Đăng xuất</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
