@@ -6,15 +6,19 @@ import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
-function Login({ login, handleLogin }) {
+function Login({ form, handleForm, handleLogin }) {
     const [tabLogin, setTabLogin] = useState(1);
     const toggleTab = (index) => {
         setTabLogin(index);
     };
 
+    const handleRegister = () => {
+        toggleTab(1);
+    };
+
     return (
-        <div className={cx('login', login ? 'open' : '')}>
-            <div className={cx('modal-overlay')} onClick={handleLogin}></div>
+        <div className={cx('login', form ? 'open' : '')}>
+            <div className={cx('modal-overlay')} onClick={handleForm}></div>
             <div className={cx('login-form')}>
                 <div className={cx('form-header')}>
                     <span
@@ -43,8 +47,15 @@ function Login({ login, handleLogin }) {
                             </div>
                         </div>
                         <div className={cx('button-login')}>
-                            <button>Đăng nhập</button>
-                            <button onClick={handleLogin}>Hủy</button>
+                            <button
+                                onClick={(e) => {
+                                    handleForm();
+                                    handleLogin();
+                                }}
+                            >
+                                Đăng nhập
+                            </button>
+                            <button onClick={handleForm}>Hủy</button>
                         </div>
                     </div>
                     <div className={cx('login-social')}>
@@ -71,8 +82,8 @@ function Login({ login, handleLogin }) {
                         <span className={cx('title-login')}>Nhập lại mật khẩu:</span>
                         <input className={cx('input-login')} type="text" />
                         <div className={cx('button-login')}>
-                            <button>Đăng ký</button>
-                            <button onClick={handleLogin}>Hủy</button>
+                            <button onClick={handleRegister}>Đăng ký</button>
+                            <button onClick={handleForm}>Hủy</button>
                         </div>
                     </div>
                     <div className={cx('login-social')}>

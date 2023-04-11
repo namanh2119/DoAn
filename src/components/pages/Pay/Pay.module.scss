@@ -78,6 +78,10 @@
         border: none;
         font-size: 1.8rem;
         line-height: 16px;
+
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }
 

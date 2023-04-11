@@ -10,7 +10,12 @@ import { useState } from 'react';
 function Header() {
     const cx = classNames.bind(styles);
 
-    const [login, setLogin] = useState(false);
+    const [form, setForm] = useState(false);
+    const handleForm = () => {
+        setForm((curr) => !curr);
+    };
+
+    const [login, setLogin] = useState('open');
     const handleLogin = () => {
         setLogin((curr) => !curr);
     };
@@ -71,20 +76,20 @@ function Header() {
                         <Link to="/pay" className={cx('link')}>
                             <FontAwesomeIcon icon={faCartShopping} />
                         </Link>
-                        <button className={cx('user')} onClick={handleLogin}>
+                        <button className={cx('user', login ? 'open' : '')} onClick={handleForm}>
                             <FontAwesomeIcon icon={faUser} />
                         </button>
                         <div className={cx('user__login')}>
-                            <img src="" className={cx('avatar', 'open')} />
+                            <img src="" className={cx('avatar', login ? '' : 'open')} />
                             <div className={cx('user__info')}>
                                 <span>Hoàng Nam</span>
-                                <button>Đăng xuất</button>
+                                <button onClick={handleLogin}>Đăng xuất</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <Login login={login} handleLogin={handleLogin} />
+            <Login form={form} handleForm={handleForm} handleLogin={handleLogin} />
         </header>
     );
 }

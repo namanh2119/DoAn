@@ -93,6 +93,8 @@ a[href] {
     &:hover {
         .option {
             display: block;
+            box-shadow: 2px 4px 32px #e2e2e2;
+            border-radius: 4px;
         }
     }
 }

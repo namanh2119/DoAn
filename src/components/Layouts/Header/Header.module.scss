@@ -156,5 +156,8 @@
         border-radius: 12px;
         cursor: pointer;
         background-color: var(--secondary-color);
+        &:hover {
+            opacity: 0.9;
+        }
     }
 }
