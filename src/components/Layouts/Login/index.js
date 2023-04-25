@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
+import InputPassword from '../Input';
 
 const cx = classNames.bind(styles);
 
@@ -36,10 +37,8 @@ function Login({ form, handleForm, handleLogin }) {
                 </div>
                 <div className={cx('form-main', tabLogin === 1 ? 'form-active' : '')}>
                     <div className={cx('form-info')}>
-                        <span className={cx('title-login')}>Tên đăng nhập:</span>
-                        <input className={cx('input-login')} type="text" />
-                        <span className={cx('title-login')}>Mật khẩu:</span>
-                        <input className={cx('input-login')} type="password" />
+                        <input className={cx('input-login')} type="text" placeholder="Tên đăng nhập" />
+                        <InputPassword name="Mật khẩu" />
                         <div className={cx('exten-login')}>
                             <div className={cx('save-login')}>
                                 Ghi nhớ đăng nhập
@@ -75,12 +74,9 @@ function Login({ form, handleForm, handleLogin }) {
                 </div>
                 <div className={cx('form-main', tabLogin === 2 ? 'form-active' : '')}>
                     <div className={cx('form-info')}>
-                        <span className={cx('title-login')}>Tên đăng nhập:</span>
-                        <input className={cx('input-login')} type="text" />
-                        <span className={cx('title-login')}>Mật khẩu:</span>
-                        <input className={cx('input-login')} type="text" />
-                        <span className={cx('title-login')}>Nhập lại mật khẩu:</span>
-                        <input className={cx('input-login')} type="text" />
+                        <input className={cx('input-login')} type="text" placeholder="Tên đăng nhập" />
+                        <InputPassword name="Mật khẩu" />
+                        <InputPassword name="Nhập lại mật khẩu" />
                         <div className={cx('button-login')}>
                             <button onClick={handleRegister}>Đăng ký</button>
                             <button onClick={handleForm}>Hủy</button>

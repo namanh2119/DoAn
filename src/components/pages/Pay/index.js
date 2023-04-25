@@ -15,15 +15,21 @@ function Pay() {
         <div className={cx('pay', 'grid', 'wide')}>
             <div className={cx('pay__content', 'row', 'col')}>
                 <div className={cx('pay__title')}>
-                    <span className={cx('l-8')}>Sản phẩm</span>
+                    <span className={cx('l-6')}>Sản phẩm</span>
                     <span className={cx('l-2')}>Số lượng</span>
                     <span className={cx('l-2')}>Thành tiền</span>
+                    <span className={cx('l-2')}></span>
                 </div>
                 <div className={cx('pay__products')}>
                     <ul className={cx('pay__list')}>
                         <li className={cx('pay__item', 'row', 'col')}>
-                            <div className={cx('pay__product', 'l-8')}>
-                                <img className={cx('product__image')}></img>
+                            <div className={cx('pay__product', 'l-6')}>
+                                <div
+                                    className={cx('product__image')}
+                                    style={{
+                                        backgroundImage: `url('https://cdn.tgdd.vn/Files/2019/06/05/1171265/cach-lam-com-chien-trung-hat-com-toi-khong-bi-nhao-202203031523399671.jpg'`,
+                                    }}
+                                ></div>
                                 <div className={cx('product__info')}>
                                     <p className={cx('product__name')}>Suất Cơm sườn nấu niêu</p>
                                     <p className={cx('product__price')}>120000đ</p>
@@ -31,6 +37,7 @@ function Pay() {
                             </div>
                             <span className={cx('l-2')}>1</span>
                             <span className={cx('l-2')}>120000đ</span>
+                            <div className={cx('delete-btn', 'l-2')}>Xóa</div>
                         </li>
                     </ul>
                 </div>

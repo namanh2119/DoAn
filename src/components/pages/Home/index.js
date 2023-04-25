@@ -51,7 +51,10 @@ function Home() {
                         {missions.map((mission, index) => (
                             <div key={index} className={cx('mission__item col l-4')}>
                                 <div className={cx('mission__item')}>
-                                    <img className={cx('mission__image')} src={mission.image} />
+                                    <div
+                                        className={cx('mission__image')}
+                                        style={{ backgroundImage: `url('${mission.image}')` }}
+                                    ></div>
                                     <div className={cx('mission__content')}>
                                         <div className={cx('mission__content--title')}>{mission.name}</div>
                                         <div className={cx('mission__content--text')}>{mission.description}</div>
@@ -66,13 +69,16 @@ function Home() {
                         <div className={cx('product', 'grid', 'wide')}>
                             <h3 className={cx('section-title')}>Thức ăn ưa thích</h3>
                             <div className={cx('row', 't-1')}>
-                                <div className={cx('col l-4')}>
+                                <div className={cx('col l-3')}>
                                     <Product />
                                 </div>
-                                <div className={cx('col l-4')}>
+                                <div className={cx('col l-3')}>
                                     <Product />
                                 </div>
-                                <div className={cx('col l-4')}>
+                                <div className={cx('col l-3')}>
+                                    <Product />
+                                </div>
+                                <div className={cx('col l-3')}>
                                     <Product />
                                 </div>
                             </div>
@@ -83,13 +89,16 @@ function Home() {
                 <div className={cx('product', 'grid', 'wide')}>
                     <h3 className={cx('section-title')}>Đồ uống nổi bật</h3>
                     <div className={cx('row t-1')}>
-                        <div className={cx('col l-4')}>
+                        <div className={cx('col l-3')}>
                             <Product />
                         </div>
-                        <div className={cx('col l-4')}>
+                        <div className={cx('col l-3')}>
                             <Product />
                         </div>
-                        <div className={cx('col l-4')}>
+                        <div className={cx('col l-3')}>
+                            <Product />
+                        </div>
+                        <div className={cx('col l-3')}>
                             <Product />
                         </div>
                     </div>

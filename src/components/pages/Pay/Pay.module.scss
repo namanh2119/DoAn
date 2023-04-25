@@ -30,6 +30,20 @@
         align-items: center;
         font-size: 2rem;
     }
+
+    .delete-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 2rem;
+
+        &:hover {
+            color: #ff7b7b;
+        }
+    }
 }
 
 .pay__product {
@@ -37,8 +51,10 @@
 }
 
 .product__image {
-    width: 300px;
-    height: 200px;
+    width: 60%;
+    padding-top: 32%;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     border-radius: 12px;
 }

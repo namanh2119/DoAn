@@ -1,0 +1,28 @@
+.input-login {
+    width: 100%;
+    padding: 12px 12px;
+    border-bottom: 1px solid #cfcfcf;
+    margin: 20px 0;
+    font-size: 1.8rem;
+}
+
+.password {
+    display: flex;
+    position: relative;
+}
+
+.show-password {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 40%;
+}
+
+.show-icon {
+    cursor: pointer;
+    color: #646464;
+}
+
+.show-icon.open {
+    display: flex;
+}

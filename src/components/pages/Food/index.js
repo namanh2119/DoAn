@@ -26,7 +26,7 @@ function Food() {
                         <ul className={cx('option')}>
                             {prices.map((price, index) => (
                                 <li key={index} className={cx('item')}>
-                                    <a href="" className={cx('option--link')}>
+                                    <a href="/" className={cx('option--link')}>
                                         {price}
                                     </a>
                                 </li>
