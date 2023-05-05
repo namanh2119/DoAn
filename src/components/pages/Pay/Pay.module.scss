@@ -48,6 +48,7 @@
 
 .pay__product {
     display: flex;
+    height: 190px;
 }
 
 .product__image {
@@ -76,6 +77,23 @@
 .product__price {
     padding-top: 20px;
     font-size: 2rem;
+}
+
+.quantity__product {
+    display: flex;
+    color: var(--text-color);
+    font-weight: 400;
+    span {
+        padding: 0 12px;
+    }
+    .quantity__icon {
+        font-size: 1.8rem;
+        padding: 8px;
+        cursor: pointer;
+        &:hover {
+            scale: 1.2;
+        }
+    }
 }
 
 .pay__trans {

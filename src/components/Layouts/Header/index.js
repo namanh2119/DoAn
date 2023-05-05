@@ -79,13 +79,19 @@ function Header() {
                         <button className={cx('user', login ? 'open' : '')} onClick={handleForm}>
                             <FontAwesomeIcon icon={faUser} />
                         </button>
-                        <div className={cx('user__login')}>
-                            <img src="" className={cx('avatar', login ? '' : 'open')} />
+                        <Link to="/account" className={cx('user__login')}>
+                            <div
+                                style={{
+                                    backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsTY3dnw818v42oQ4urql3cTcRi-_2w6SYJg&usqp=CAU')`,
+                                }}
+                                className={cx('avatar', login ? '' : 'open')}
+                            ></div>
                             <div className={cx('user__info')}>
                                 <span>Hoàng Nam</span>
+                                <span>Tài Khoản</span>
                                 <button onClick={handleLogin}>Đăng xuất</button>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>

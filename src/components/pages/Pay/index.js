@@ -2,6 +2,8 @@ import classNames from 'classnames/bind';
 import styles from './Pay.module.scss';
 import Bill from '../../Layouts/Bill';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
@@ -9,6 +11,14 @@ function Pay() {
     const [bill, setBill] = useState(false);
     const handleBill = () => {
         setBill((curr) => !curr);
+    };
+
+    const [quantity, setQuantity] = useState(1);
+    const increaseQuantity = () => {
+        setQuantity((quantity) => quantity + 1);
+    };
+    const reduceQuantity = () => {
+        setQuantity((quantity) => quantity - 1);
     };
 
     return (
@@ -35,7 +45,19 @@ function Pay() {
                                     <p className={cx('product__price')}>120000đ</p>
                                 </div>
                             </div>
-                            <span className={cx('l-2')}>1</span>
+                            <span className={cx('quantity__product', 'l-2')}>
+                                <FontAwesomeIcon
+                                    className={cx('quantity__icon')}
+                                    icon={faAngleLeft}
+                                    onClick={reduceQuantity}
+                                />
+                                <span>{quantity}</span>
+                                <FontAwesomeIcon
+                                    className={cx('quantity__icon')}
+                                    icon={faAngleRight}
+                                    onClick={increaseQuantity}
+                                />
+                            </span>
                             <span className={cx('l-2')}>120000đ</span>
                             <div className={cx('delete-btn', 'l-2')}>Xóa</div>
                         </li>
