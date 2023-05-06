@@ -1,0 +1,68 @@
+.account {
+    padding: var(--padding-section) 0;
+}
+
+.avatar {
+    .btn {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.avatar-user {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 999px;
+}
+
+.btn {
+    font-size: 1.8rem;
+    padding: 12px 60px;
+    margin-top: 12px;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.button {
+    margin-top: 23px;
+
+    .btn {
+        margin-right: 12px;
+    }
+}
+
+.title-user {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0 0 4px 0;
+    line-height: 28px;
+}
+
+.form-user {
+    margin-bottom: 20px;
+
+    input {
+        padding: 12px;
+        border-radius: 4px;
+        border: 1px solid #cfcfcf;
+        width: 100%;
+    }
+}
+
+.address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -24px;
+
+    input {
+        width: 100%;
+    }
+}
