@@ -15,15 +15,12 @@ function Header() {
         setForm((curr) => !curr);
     };
 
-    const [login, setLogin] = useState('open');
-    const handleLogin = () => {
-        setLogin((curr) => !curr);
-    };
-
     const [page, setPage] = useState(1);
     const togglePage = (index) => {
         setPage(index);
     };
+
+    const currentHeader = false;
 
     return (
         <header className={cx('header')}>
@@ -31,7 +28,7 @@ function Header() {
                 <div className={cx('header__content')}>
                     <div className={cx('header__left')}>
                         <Link to="/" className={cx('logo')}>
-                            <img src={logo} />
+                            <img src={logo} alt="logo" />
                         </Link>
                         <ul className={cx('header__list')}>
                             <li className={cx('header__list-item')}>
@@ -76,26 +73,24 @@ function Header() {
                         <Link to="/pay" className={cx('link')}>
                             <FontAwesomeIcon icon={faCartShopping} />
                         </Link>
-                        <button className={cx('user', login ? 'open' : '')} onClick={handleForm}>
-                            <FontAwesomeIcon icon={faUser} />
-                        </button>
-                        <Link to="/account" className={cx('user__login')}>
-                            <div
-                                style={{
-                                    backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsTY3dnw818v42oQ4urql3cTcRi-_2w6SYJg&usqp=CAU')`,
-                                }}
-                                className={cx('avatar', login ? '' : 'open')}
-                            ></div>
-                            <div className={cx('user__info')}>
-                                <span>Hoàng Nam</span>
-                                <span>Tài Khoản</span>
-                                <button onClick={handleLogin}>Đăng xuất</button>
-                            </div>
-                        </Link>
+                        {currentHeader ? (
+                            <Link to="/account" className={cx('user__login')}>
+                                <div
+                                    style={{
+                                        backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsTY3dnw818v42oQ4urql3cTcRi-_2w6SYJg&usqp=CAU')`,
+                                    }}
+                                    className={cx('avatar')}
+                                ></div>
+                            </Link>
+                        ) : (
+                            <button className={cx('user')} onClick={handleForm}>
+                                <FontAwesomeIcon icon={faUser} />
+                            </button>
+                        )}
                     </div>
                 </div>
             </div>
-            <Login form={form} handleForm={handleForm} handleLogin={handleLogin} />
+            <Login form={form} handleForm={handleForm} />
         </header>
     );
 }

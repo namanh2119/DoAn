@@ -7,7 +7,7 @@ import InputPassword from '../Input';
 
 const cx = classNames.bind(styles);
 
-function Login({ form, handleForm, handleLogin }) {
+function Login({ form, handleForm }) {
     const [tabLogin, setTabLogin] = useState(1);
     const toggleTab = (index) => {
         setTabLogin(index);
@@ -49,7 +49,6 @@ function Login({ form, handleForm, handleLogin }) {
                             <button
                                 onClick={(e) => {
                                     handleForm();
-                                    handleLogin();
                                 }}
                             >
                                 Đăng nhập
