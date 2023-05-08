@@ -1,4 +1,4 @@
-import { faAngleDown, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import styles from './Food.module.scss';
@@ -74,44 +74,6 @@ function Food() {
                     <Product />
                 </div>
             </div>
-
-            <ul className={cx('pagination')}>
-                <li className={cx('pagination-item')}>
-                    <a href="#" className={cx('pagination-item__link')}>
-                        <FontAwesomeIcon className={cx('pagination-item__link--icon')} icon={faAngleLeft} />
-                    </a>
-                </li>
-                <li className={cx('pagination-item pagination-item__active')}>
-                    <a href="#" className={cx('pagination-item__link')}>
-                        1
-                    </a>
-                </li>
-                <li className={cx('pagination-item')}>
-                    <a href="#" className={cx('pagination-item__link')}>
-                        2
-                    </a>
-                </li>
-                <li className={cx('pagination-item')}>
-                    <a href="#" className={cx('pagination-item__link')}>
-                        3
-                    </a>
-                </li>
-                <li className={cx('pagination-item')}>
-                    <a href="#" className={cx('pagination-item__link')}>
-                        ...
-                    </a>
-                </li>
-                <li className={cx('pagination-item')}>
-                    <a href="#" className={cx('pagination-item__link')}>
-                        14
-                    </a>
-                </li>
-                <li className={cx('pagination-item')}>
-                    <a href="#" className={cx('pagination-item__link')}>
-                        <FontAwesomeIcon className={cx('pagination-item__link--icon')} icon={faAngleRight} />
-                    </a>
-                </li>
-            </ul>
         </div>
     );
 }
