@@ -1,0 +1,13 @@
+.container {
+    min-height: 100vh;
+    padding-top: var(--nav-height);
+    display: flex;
+}
+
+.sidebar-wrapper {
+    background-color: var(--secondary-color);
+}
+
+.pages-ad {
+    padding-top: var(--padding-section);
+}

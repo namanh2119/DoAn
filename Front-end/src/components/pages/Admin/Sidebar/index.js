@@ -1,34 +1,50 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import classNames from 'classnames/bind'
 import styles from './Sidebar.module.scss'
 
-const cx = classNames.bind(styles)
+function Sidebar({ className }) {
+    const cx = classNames.bind(styles)
+    const [pageAd, setPageAd] = useState(1);
+    const togglePageAd = (index) => {
+        setPageAd(index);
+    };
 
-const Sidebar = () => {
     return (
-        <div className={cx("sidebar-wrapper")}>
-            <nav id="sidebar">
-                <ul className={cx("list-unstyled components")}>
+        <div className={className}>
+            <nav className={cx("sidebar")}>
+                <ul className={cx("list-categorys")}>
+                    <span>Danh Mục</span>
                     <li>
-                        <Link to="/admin">Tổng quan</Link>
+                        <NavLink to="/admin"
+                        className={cx('item__category', pageAd === 1 ? 'active' : '')}
+                        onClick={() => togglePageAd(1)}>Tổng quan</NavLink>
                     </li>
                     <li>
-                        <Link to="/admin/foods">Quản lý Món Ăn</Link>
+                        <NavLink to="/admin/foods" 
+                        className={cx('item__category', pageAd === 2 ? 'active' : '')}
+                        onClick={() => togglePageAd(2)}>Quản lý Món Ăn</NavLink>
                     </li>
                     <li>
-                        <Link to="/admin/drinks">Quản lý Đồ Uống</Link>
+                        <NavLink to="/admin/drinks" 
+                        className={cx('item__category', pageAd === 3 ? 'active' : '')}
+                        onClick={() => togglePageAd(3)}>Quản lý Đồ Uống</NavLink>
                     </li>
                     <li>
-                        <Link to="/admin/orders">Quản lý đơn hàng</Link>
+                        <NavLink to="/admin/orders" 
+                        className={cx('item__category', pageAd === 4 ? 'active' : '')}
+                        onClick={() => togglePageAd(4)}>Quản lý đơn hàng</NavLink>
                     </li>
                     <li>
-                        <Link to="/admin/users">Quản lý người dùng</Link>
+                        <NavLink to="/admin/users" 
+                        className={cx('item__category', pageAd === 5 ? 'active' : '')}
+                        onClick={() => togglePageAd(5)}>Quản lý người dùng</NavLink>
                     </li>
                     <li>
-                        <Link to="/admin/feedback">Quản lý bình luận</Link>
+                        <NavLink to="/admin/feedback" 
+                        className={cx('item__category', pageAd === 6 ? 'active' : '')}
+                        onClick={() => togglePageAd(6)}>Quản lý phản hồi</NavLink>
                     </li>
-
                 </ul>
             </nav>
         </div>

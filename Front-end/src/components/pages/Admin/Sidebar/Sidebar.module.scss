@@ -1,0 +1,31 @@
+.sidebar {
+    padding: var(--padding section);
+    overflow: hidden;
+}
+
+.list-categorys {
+    span {
+        display: block;
+        padding: 18px 0;
+        font-size: 1.9rem;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .item__category {
+        display: block;
+        padding: 16px 32px;
+        background-color: var(--secondary-color);
+        position: relative;
+        &:hover {
+            left: 2px;
+            font-weight: 500;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    .item__category.action {       
+        font-weight: 500;
+        text-decoration: underline;
+    }
+}
