@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
-import InputPassword from '../Input';
+import InputPassword from '../../Layouts/Input';
 
 const cx = classNames.bind(styles);
 

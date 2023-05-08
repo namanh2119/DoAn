@@ -4,6 +4,7 @@ import Drink from '../pages/Drink';
 import Contact from '../pages/Contact';
 import Pay from '../pages/Pay';
 import Account from '../pages/Account';
+import ProductDetail from '../pages/ProductDetail';
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -12,6 +13,7 @@ const publicRoutes = [
     { path: '/contact', component: Contact },
     { path: '/pay', component: Pay },
     { path: '/account', component: Account },
+    { path: '/productdetail', component: ProductDetail },
 ];
 const privateRoutes = [];
 
