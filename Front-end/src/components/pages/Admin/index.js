@@ -9,8 +9,8 @@ function Admin({children}) {
     return (<div>
         <HeaderAd />
         <main className={cx('container', 'row', 'col')}>
-            <Sidebar className={cx('sidebar-wrapper', 'l-2')}/>
-            <div className={cx('pages-ad', 'l-10')}>{children}</div>
+            <Sidebar className={cx('sidebar-wrapper', 'l-2', 'col')}/>
+            <div className={cx('pages-ad', 'l-10', 'col')}>{children}</div>
         </main>
      </div> );
 }

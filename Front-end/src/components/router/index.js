@@ -11,6 +11,7 @@ import MenuDrink from '../pages/Admin/AdminPages/MenuDrink';
 import Oders from '../pages/Admin/AdminPages/Oders';
 import Users from '../pages/Admin/AdminPages/Users';
 import Feedback from '../pages/Admin/AdminPages/Feedback';
+import Comments from '../pages/Admin/AdminPages/Comments';
 
 const publicRoutes = [
     { path: '/', component: Home },
@@ -26,6 +27,7 @@ const publicRoutes = [
     { path: '/admin/orders', component: Oders },
     { path: '/admin/users', component: Users },
     { path: '/admin/feedback', component: Feedback },
+    { path: '/admin/comments', component: Comments },
 ];
 const privateRoutes = [];
 

@@ -45,6 +45,11 @@ function Sidebar({ className }) {
                         className={cx('item__category', pageAd === 6 ? 'active' : '')}
                         onClick={() => togglePageAd(6)}>Quản lý phản hồi</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/admin/comments" 
+                        className={cx('item__category', pageAd === 7 ? 'active' : '')}
+                        onClick={() => togglePageAd(7)}>Quản lý bình luận</NavLink>
+                    </li>
                 </ul>
             </nav>
         </div>

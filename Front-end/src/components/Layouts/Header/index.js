@@ -70,9 +70,12 @@ function Header() {
                         </ul>
                     </div>
                     <div className={cx('header__right')}>
-                        <Link to="/pay" className={cx('link')}>
-                            <FontAwesomeIcon icon={faCartShopping} />
-                        </Link>
+                        <div className={cx('carts')}>
+                            <Link to="/pay" className={cx('link')}>
+                                <FontAwesomeIcon icon={faCartShopping} />
+                            </Link>
+                            <span className={cx('num-carts')}>4</span>
+                        </div>
                         {currentHeader ? (
                             <Link to="/account" className={cx('user__login')}>
                                 <div

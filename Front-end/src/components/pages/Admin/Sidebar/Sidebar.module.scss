@@ -4,6 +4,7 @@
 }
 
 .list-categorys {
+    position: fixed;
     span {
         display: block;
         padding: 18px 0;
@@ -24,7 +25,7 @@
             cursor: pointer;
         }
     }
-    .item__category.action {       
+    .item__category.active {       
         font-weight: 500;
         text-decoration: underline;
     }
