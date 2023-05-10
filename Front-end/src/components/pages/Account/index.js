@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './Account.module.scss';
 import classNames from 'classnames/bind';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -10,6 +10,10 @@ function Account() {
     const handleClick = () => {
         inputRef.current.click();
     };
+    const [updateBtn, setUpdateBtn] = useState(true)
+    const handleUpdateBtn = () => {
+        setUpdateBtn(res => !res)
+    }
     const handleFileChange = (event) => {
         const fileObj = event.target.files && event.target.files[0];
         if (!fileObj) {
@@ -74,16 +78,17 @@ function Account() {
                         </div>
                     </div>
                     <div className={cx('button')}>
-                        <div className={cx('action')}>
-                            <button className={cx('btn')}>Cập nhật</button>
+                        {updateBtn ? 
+                        (<div className={cx('action')}>
+                            <button className={cx('btn')} onClick={handleUpdateBtn}>Cập nhật</button>
                             <Link to="/" className={cx('btn')}>
                                 Đăng xuất
                             </Link>
-                        </div>
-                        <div className={cx('update-info')}>
+                        </div>) : 
+                        (<div className={cx('update-info')}>
                             <button className={cx('btn')}>Lưu</button>
-                            <button className={cx('btn')}>Hủy</button>
-                        </div>
+                            <button className={cx('btn')} onClick={handleUpdateBtn}>Hủy</button>
+                        </div>)}
                     </div>
                 </div>
             </div>
