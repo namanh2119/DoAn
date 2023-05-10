@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../assets/logo.png';
-import Login from '../../pages/Login';
+import Login from '../Login';
 import { useState } from 'react';
 
 function Header() {

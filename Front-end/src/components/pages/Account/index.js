@@ -44,15 +44,15 @@ function Account() {
                 </div>
                 <div className={cx('infomation', 'l-7', 'col')}>
                     <div className={cx('form-user')}>
-                        <p className={cx('title-user')}>Họ và tên:</p>
+                        <p className={cx('title-user')}>Tài khoản:</p>
+                        <input type="text" />
+                    </div>
+                    <div className={cx('form-user')}>
+                        <p className={cx('title-user')}>Mật khẩu:</p>
                         <input type="text" />
                     </div>
                     <div className={cx('form-user')}>
                         <p className={cx('title-user')}>Số điện thoại:</p>
-                        <input type="text" />
-                    </div>
-                    <div className={cx('form-user')}>
-                        <p className={cx('title-user')}>Mail:</p>
                         <input type="text" />
                     </div>
                     <div className={cx('address', 'row', 'col')}>
@@ -74,10 +74,16 @@ function Account() {
                         </div>
                     </div>
                     <div className={cx('button')}>
-                        <button className={cx('btn')}>Cập nhật</button>
-                        <Link to="/" className={cx('btn')}>
-                            Đăng xuất
-                        </Link>
+                        <div className={cx('action')}>
+                            <button className={cx('btn')}>Cập nhật</button>
+                            <Link to="/" className={cx('btn')}>
+                                Đăng xuất
+                            </Link>
+                        </div>
+                        <div className={cx('update-info')}>
+                            <button className={cx('btn')}>Lưu</button>
+                            <button className={cx('btn')}>Hủy</button>
+                        </div>
                     </div>
                 </div>
             </div>
