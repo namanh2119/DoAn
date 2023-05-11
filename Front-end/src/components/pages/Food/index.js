@@ -3,18 +3,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import styles from './Food.module.scss';
 import Product from '../../../components/Layouts/Product';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
-const lists = ['Tất cả', 'Cơm', 'Phở, bún', 'Bánh mì', 'Đồ ăn vặt'];
-const prices = ['Thấp đến cao', 'Cao đến thấp', 'Dưới 50k', '50k -> 100k', '100k -> 150k', 'Trên 150k'];
+const lists = ['Tất cả', 'Cơm', 'Bún', 'Bánh mì', 'Đồ ăn vặt'];
+const prices = ['Thấp đến cao', 'Cao đến thấp'];
 
 function Food() {
+    const [filter, setFilter] = useState(0)
+    const handleFilter = (index) => {
+        setFilter(index);
+    };
+
     return (
         <div className={cx('products', 'grid', 'wide')}>
             <div className={cx('row', 'col', 'l-12', 't-1')}>
                 <div className={cx('filter')}>
                     {lists.map((list, index) => (
-                        <button key={index} className={cx('btn--filter')}>
+                        <button key={index} className={cx('btn--filter', filter === index ? 'active':'')}
+                            onClick={() => handleFilter(index)}
+                        >
                             {list}
                         </button>
                     ))}
@@ -26,7 +34,7 @@ function Food() {
                         <ul className={cx('option')}>
                             {prices.map((price, index) => (
                                 <li key={index} className={cx('item')}>
-                                    <a href="/" className={cx('option--link')}>
+                                    <a href="/food" className={cx('option--link')}>
                                         {price}
                                     </a>
                                 </li>

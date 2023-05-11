@@ -1,7 +1,5 @@
 import styles from './Login.module.scss';
 import classNames from 'classnames/bind';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
 import InputPassword from '../Input';
 
@@ -56,20 +54,6 @@ function Login({ form, handleForm }) {
                             <button onClick={handleForm}>Hủy</button>
                         </div>
                     </div>
-                    <div className={cx('login-social')}>
-                        <button>
-                            <FontAwesomeIcon className={cx('social-icon')} icon={faGoogle} />
-                            <span>Đăng nhập bằng Google</span>
-                        </button>
-                        <button>
-                            <FontAwesomeIcon className={cx('social-icon')} icon={faFacebook} />
-                            <span>Đăng nhập bằng Facebook</span>
-                        </button>
-                        <button>
-                            <FontAwesomeIcon className={cx('social-icon')} icon={faTwitter} />
-                            <span>Đăng nhập bằng Twitter</span>
-                        </button>
-                    </div>
                 </div>
                 <div className={cx('form-main', tabLogin === 2 ? 'form-active' : '')}>
                     <div className={cx('form-info')}>
@@ -80,20 +64,6 @@ function Login({ form, handleForm }) {
                             <button onClick={handleRegister}>Đăng ký</button>
                             <button onClick={handleForm}>Hủy</button>
                         </div>
-                    </div>
-                    <div className={cx('login-social')}>
-                        <button>
-                            <FontAwesomeIcon className={cx('social-icon')} icon={faGoogle} />
-                            <span> Đăng nhập bằng Google</span>
-                        </button>
-                        <button>
-                            <FontAwesomeIcon className={cx('social-icon')} icon={faFacebook} />
-                            <span> Đăng nhập bằng Facebook</span>
-                        </button>
-                        <button>
-                            <FontAwesomeIcon className={cx('social-icon')} icon={faTwitter} />
-                            <span> Đăng nhập bằng Twitter</span>
-                        </button>
                     </div>
                 </div>
             </div>

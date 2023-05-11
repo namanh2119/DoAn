@@ -7,6 +7,8 @@ import logo from '../../../assets/logo.png';
 import Login from '../Login';
 import { useState } from 'react';
 
+const menus = [{name: 'Trang chủ', path: '/'}, {name: 'Món ăn', path: '/food'}, {name: 'Đồ uống', path: '/drink'}, {name: 'Liên hệ', path: '/contact'}]
+
 function Header() {
     const cx = classNames.bind(styles);
 
@@ -15,7 +17,7 @@ function Header() {
         setForm((curr) => !curr);
     };
 
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(0);
     const togglePage = (index) => {
         setPage(index);
     };
@@ -31,42 +33,18 @@ function Header() {
                             <img src={logo} alt="logo" />
                         </Link>
                         <ul className={cx('header__list')}>
-                            <li className={cx('header__list-item')}>
+                            {menus.map((menu, index) => 
+                                (<li className={cx('header__list-item')} 
+                                key={index}>
                                 <NavLink
-                                    to="/"
-                                    className={cx('item__link', page === 1 ? 'active' : '')}
-                                    onClick={() => togglePage(1)}
+                                    to={menu.path}
+                                    className={cx('item__link', page === index ? 'active' : '')}
+                                    onClick={() => togglePage(index)}
                                 >
-                                    Trang chủ
+                                    {menu.name}
                                 </NavLink>
-                            </li>
-                            <li className={cx('header__list-item')}>
-                                <NavLink
-                                    to="/food"
-                                    className={cx('item__link', page === 2 ? 'active' : '')}
-                                    onClick={() => togglePage(2)}
-                                >
-                                    Món ăn
-                                </NavLink>
-                            </li>
-                            <li className={cx('header__list-item')}>
-                                <NavLink
-                                    to="/drink"
-                                    className={cx('item__link', page === 3 ? 'active' : '')}
-                                    onClick={() => togglePage(3)}
-                                >
-                                    Đồ uống
-                                </NavLink>
-                            </li>
-                            <li className={cx('header__list-item')}>
-                                <NavLink
-                                    to="/contact"
-                                    className={cx('item__link', page === 4 ? 'active' : '')}
-                                    onClick={() => togglePage(4)}
-                                >
-                                    Liên hệ
-                                </NavLink>
-                            </li>
+                            </li>)
+                            )}
                         </ul>
                     </div>
                     <div className={cx('header__right')}>

@@ -19,17 +19,6 @@ function Account() {
         if (!fileObj) {
             return;
         }
-        console.log('fileObj is', fileObj);
-
-        // 👇️ reset file input
-        event.target.value = null;
-
-        // 👇️ is now empty
-        console.log(event.target.files);
-
-        // 👇️ can still access file object here
-        console.log(fileObj);
-        console.log(fileObj.name);
     };
 
     return (
@@ -59,23 +48,9 @@ function Account() {
                         <p className={cx('title-user')}>Số điện thoại:</p>
                         <input type="text" />
                     </div>
-                    <div className={cx('address', 'row', 'col')}>
-                        <div className={cx('form-user', 'l-6', 'col')}>
-                            <p className={cx('title-user')}>Tỉnh/Thành Phố:</p>
-                            <input type="text" />
-                        </div>
-                        <div className={cx('form-user', 'l-6', 'col')}>
-                            <p className={cx('title-user')}>Quận/Huyện:</p>
-                            <input type="text" />
-                        </div>
-                        <div className={cx('form-user', 'l-6', 'col')}>
-                            <p className={cx('title-user')}>Xã/Phường:</p>
-                            <input type="text" />
-                        </div>
-                        <div className={cx('form-user', 'l-6', 'col')}>
-                            <p className={cx('title-user')}>Số nhà/Ngõ:</p>
-                            <input type="text" />
-                        </div>
+                    <div className={cx('form-user')}>
+                        <p className={cx('title-user')}>Địa chỉ:</p>
+                        <input type="text" />
                     </div>
                     <div className={cx('button')}>
                         {updateBtn ? 

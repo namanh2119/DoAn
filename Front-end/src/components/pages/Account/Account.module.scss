@@ -8,11 +8,16 @@
         left: 50%;
         transform: translateX(-50%);
     }
+    .avatar-user {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .avatar-user {
-    width: 100%;
-    padding-top: 100%;
+    width: 50%;
+    padding-top: 50%;
     border-radius: 999px;
 }
 
