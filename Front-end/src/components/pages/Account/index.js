@@ -17,7 +17,7 @@ function Account() {
     const handleFileChange = (event) => {
         const fileObj = event.target.files && event.target.files[0];
         if (!fileObj) {
-            return;
+            return; 
         }
     };
 
