@@ -25,10 +25,11 @@
     }
 }
 
-.user-menu {
+.oders-menu {
     display: flex;
     align-items: center;
-    margin: 12px 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
     input {
         text-align: center;
         font-size: 1.6rem;
@@ -41,13 +42,6 @@
 .image {
     display: flex;
     justify-content: center;
-}
-
-.user-image {
-    width: 120px;
-    height: 120px;
-    background-size: cover;
-    border-radius: 999px;
 }
 
 .action {

@@ -23,17 +23,17 @@ function MenuFood() {
             </div>
             <div className={cx('products-menu')}>
                 <span className={cx('l-1')}>1</span>
-                <div
-                    className={cx('product-image', 'l-2')}
-                    style={{
-                        backgroundImage: `url('https://cdn.tgdd.vn/Files/2019/06/05/1171265/cach-lam-com-chien-trung-hat-com-toi-khong-bi-nhao-202203031523399671.jpg'`,
-                    }}
-                ></div>
-                <span className={cx('l-2')}>Suất Cơm sườn nấu niêu</span>
-                <span className={cx('l-2')}>120000</span>
-                <span className={cx('l-1')}>Cơm</span>
-                <span className={cx('l-2')}>Còn hàng</span>
-                <span className={cx('l-1', 'action')}>Chi tiết</span>
+                <input
+                className={cx('product-image', 'l-2')}
+                style={{
+                    backgroundImage: `url('https://cdn.tgdd.vn/Files/2019/06/05/1171265/cach-lam-com-chien-trung-hat-com-toi-khong-bi-nhao-202203031523399671.jpg'`,
+                }}
+                />
+                <input type="text" className={cx('l-2')} value='Suất Cơm sườn nấu niêu'/>
+                <input type="text" className={cx('l-2')} value='120000'/>
+                <input type="text" className={cx('l-1')} value='Cà phê'/>
+                <input type="text" className={cx('l-2')} value='Còn hàng'/>
+                <span className={cx('l-1', 'action')}>Cập nhật</span>
                 <span className={cx('l-1', 'action')}>Xóa</span>
             </div>
         </div>

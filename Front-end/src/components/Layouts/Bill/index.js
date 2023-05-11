@@ -12,9 +12,7 @@ function Bill({ bill, handleBill }) {
                     <span className={cx('title-header')}>Thông tin người nhận</span>
                 </div>
                 <div className={cx('form-info')}>
-                    <span className={cx('title-bill')}>Tên người nhận:</span>
-                    <input className={cx('input-bill')} type="text" />
-                    <span className={cx('title-bill')}>Địa chỉ:</span>
+                    <span className={cx('title-bill')}>Địa chỉ nhận:</span>
                     <input className={cx('input-bill')} type="text" />
                     <span className={cx('title-bill')}>Số điện thoại:</span>
                     <input className={cx('input-bill')} type="text" />
