@@ -1,11 +1,9 @@
-const newRouter = require('./foodmenu')
+const newRouter = require('./foodmenu');
 
 function route(app) {
+  app.get('/', (req, res) => res.render('home'));
 
-    app.get('/', (req, res) => res.render('home'));
-
-    app.use('/food', newRouter)
-
+  app.use('/food', newRouter);
 }
 
 module.exports = route;

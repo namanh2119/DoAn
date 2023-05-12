@@ -23,10 +23,10 @@ function MenuFood() {
             </div>
             <div className={cx('products-menu')}>
                 <span className={cx('l-1')}>1</span>
-                <input
-                className={cx('product-image', 'l-2')}
-                style={{
-                    backgroundImage: `url('https://cdn.tgdd.vn/Files/2019/06/05/1171265/cach-lam-com-chien-trung-hat-com-toi-khong-bi-nhao-202203031523399671.jpg'`,
+                <div
+                    className={cx('product-image', 'l-2')}
+                    style={{
+                        backgroundImage: `url('https://cdn.tgdd.vn/Files/2019/06/05/1171265/cach-lam-com-chien-trung-hat-com-toi-khong-bi-nhao-202203031523399671.jpg'`,
                 }}
                 />
                 <input type="text" className={cx('l-2')} value='Suất Cơm sườn nấu niêu'/>

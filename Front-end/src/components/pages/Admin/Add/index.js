@@ -1,5 +1,5 @@
 import classNames from "classnames/bind";
-import styles from './Warning.module.scss'
+import styles from './Add.module.scss'
 
 const cx = classNames.bind(styles);
 
@@ -10,7 +10,7 @@ function Add() {
             <div className={cx('warn-form')}>
                 <div className={cx('form-header')}>
                     <span className={cx('title-header')}>
-                        Bạn muốn tiếp tục ?
+                        Thêm sản phẩm
                     </span>
                 </div>
                 <div className={cx('form-content')}>

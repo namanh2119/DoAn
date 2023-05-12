@@ -1,7 +1,7 @@
 class FoodmenuController {
-    index(req, res) {
-        res.render('food')
-    }
+  index(req, res) {
+    res.render('food');
+  }
 }
 
-module.exports = new FoodmenuController;
+module.exports = new FoodmenuController();
