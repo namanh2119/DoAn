@@ -4,18 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../assets/logo.png';
-import Login from '../Login';
 import { useState } from 'react';
 
 const menus = [{name: 'Trang chủ', path: '/'}, {name: 'Món ăn', path: '/food'}, {name: 'Đồ uống', path: '/drink'}, {name: 'Liên hệ', path: '/contact'}]
 
 function Header() {
     const cx = classNames.bind(styles);
-
-    const [form, setForm] = useState(false);
-    const handleForm = () => {
-        setForm((curr) => !curr);
-    };
 
     const [page, setPage] = useState(0);
     const togglePage = (index) => {
@@ -55,23 +49,27 @@ function Header() {
                             <span className={cx('num-carts')}>4</span>
                         </div>
                         {currentHeader ? (
-                            <Link to="/account" className={cx('user__login')}>
-                                <div
-                                    style={{
+                            <div className={cx('user__login')}>
+                                <Link to="/account">
+                                    <div style={{
                                         backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsTY3dnw818v42oQ4urql3cTcRi-_2w6SYJg&usqp=CAU')`,
                                     }}
-                                    className={cx('avatar')}
-                                ></div>
-                            </Link>
+                                    className={cx('avatar')}>
+                                    </div>
+                                </Link>
+                                <div className={cx('extend-account')}>
+                                    <span>Hello HoangNam</span>
+                                    <Link className={cx('user__ad')} to='/admin'>Admin</Link>
+                                </div>
+                            </div>
                         ) : (
-                            <button className={cx('user')} onClick={handleForm}>
-                                <FontAwesomeIcon icon={faUser} />
+                            <button className={cx('user')}>
+                                <Link to='/login'><FontAwesomeIcon icon={faUser} /></Link>
                             </button>
                         )}
                     </div>
                 </div>
             </div>
-            <Login form={form} handleForm={handleForm} />
         </header>
     );
 }

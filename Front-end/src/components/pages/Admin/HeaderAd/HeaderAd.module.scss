@@ -76,3 +76,47 @@
         border-radius: 5000px;
     }
 }
+
+
+.user__login {
+    &:hover {
+        .extend-account {
+            display: flex;
+        }
+    }
+}
+
+.extend-account {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    display: none;
+    flex-direction: column;
+    width: 160px;
+    text-align: center;
+    padding: 12px;
+    background-color: var(--white);
+    border-radius: 4px;
+    &::before {
+        content: '';
+        background-color: transparent;
+        position: absolute;
+        width: 50px;
+        height: 20px;
+        top: -18px;
+        right: 14px;
+    }
+    span {
+        display: block;
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+    .user__ad {
+        display: block;
+        margin: 4px 0;
+        padding: 12px;
+        font-size: 1.6rem;
+        background-color: var(--secondary-color);
+        border-radius: 4px;
+    }
+}

@@ -4,6 +4,8 @@ import Drink from '../pages/Drink';
 import Contact from '../pages/Contact';
 import Pay from '../pages/Pay';
 import Account from '../pages/Account';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
 import ProductDetail from '../pages/ProductDetail';
 import Dashboard from '../pages/Admin/AdminPages/Dashboard';
 import MenuFood from '../pages/Admin/AdminPages/MenuFood';
@@ -20,6 +22,8 @@ const publicRoutes = [
     { path: '/contact', component: Contact },
     { path: '/pay', component: Pay },
     { path: '/account', component: Account },
+    { path: '/login', component: Login },
+    { path: '/register', component: Register },
     { path: '/productdetail', component: ProductDetail },
     { path: '/admin', component: Dashboard },
     { path: '/admin/foods', component: MenuFood },

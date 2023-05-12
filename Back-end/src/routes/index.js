@@ -1,9 +1,12 @@
-const newRouter = require('./foodmenu');
+const foodsRouter = require('./foods');
+const drinksRouter = require('./drinks');
 
 function route(app) {
   app.get('/', (req, res) => res.render('home'));
 
-  app.use('/food', newRouter);
+  app.use('/foods', foodsRouter);
+
+  app.use('/drinks', drinksRouter);
 }
 
 module.exports = route;

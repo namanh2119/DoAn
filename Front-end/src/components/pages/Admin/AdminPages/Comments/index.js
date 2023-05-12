@@ -16,7 +16,8 @@ function Comments() {
             <span className={cx('l-2')}>Account</span>
             <span className={cx('l-2')}>Sản phẩm</span>
             <span className={cx('l-1')}>Đánh giá</span>
-            <span className={cx('l-4')}>Bình luận</span>
+            <span className={cx('l-3')}>Bình luận</span>
+            <span className={cx('l-1')}>Thời gian</span>
             <span className={cx('l-1')}>Trạng thái</span>
         </div>
         <div className={cx('feedback-menu', 'row', 'col')}>
@@ -24,7 +25,8 @@ function Comments() {
             <span className={cx('l-2')}>Hoàng Nam</span>
             <span className={cx('l-2')}>0123456789</span>
             <span className={cx('l-1')}>5 sao</span>
-            <span className={cx('l-4')}>Đồ ăn ngon, giao hàng nhanh, nhưng đồ ăn hơi nhạt</span>
+            <span className={cx('l-3')}>Đồ ăn ngon, giao hàng nhanh, nhưng đồ ăn hơi nhạt</span>
+            <span className={cx('l-1')}>3.30am</span>
             <input className={cx('l-1')} value='Chưa trả lời'/>
             <span className={cx('l-1', 'action')}>Xóa</span>
         </div>

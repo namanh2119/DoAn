@@ -104,19 +104,54 @@
 
 .user__login {
     &:hover {
-        .user__info {
-            display: block;
+        .extend-account {
+            display: flex;
         }
     }
 }
 
 .avatar {
+    position: relative;
     width: 30px;
     height: 30px;
     border-radius: 100%;
     margin: 0 16px;
     background-color: #ccc;
     cursor: pointer;
+}
+
+.extend-account {
+    position: absolute;
+    top: 45px;
+    left: -60px;
+    display: none;
+    flex-direction: column;
+    width: 160px;
+    text-align: center;
+    padding: 12px;
+    background-color: var(--white);
+    border-radius: 4px;
+    &::before {
+        content: '';
+        background-color: transparent;
+        position: absolute;
+        width: 50px;
+        height: 20px;
+        top: -18px;
+        right: 14px;
+    }
+    span {
+        display: block;
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+    .user__ad {
+        display: block;
+        padding: 12px;
+        font-size: 1.6rem;
+        background-color: var(--secondary-color);
+        border-radius: 4px;
+    }
 }
 
 .user__info {

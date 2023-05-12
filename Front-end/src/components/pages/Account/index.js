@@ -31,9 +31,11 @@ function Account() {
                         ref={inputRef}
                         onChange={handleFileChange}
                     />
-                    <button className={cx('btn')} onClick={handleClick}>
+                    {updateBtn ? (<></>) : (
+                        <button className={cx('btn')} onClick={handleClick}>
                         Thay đổi Avatar
-                    </button>
+                        </button>
+                    )}
                 </div>
                 <div className={cx('infomation', 'l-7', 'col')}>
                     <div className={cx('form-user')}>
@@ -46,6 +48,10 @@ function Account() {
                     </div>
                     <div className={cx('form-user')}>
                         <p className={cx('title-user')}>Số điện thoại:</p>
+                        <input type="text" />
+                    </div>
+                    <div className={cx('form-user')}>
+                        <p className={cx('title-user')}>Email:</p>
                         <input type="text" />
                     </div>
                     <div className={cx('form-user')}>
