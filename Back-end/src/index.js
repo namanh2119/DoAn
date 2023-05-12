@@ -6,6 +6,9 @@ const app = express();
 const port = 4000;
 
 const route = require('./routes');
+const data = require('./config/Data');
+
+data.connect();
 
 app.use(morgan('combined'));
 
