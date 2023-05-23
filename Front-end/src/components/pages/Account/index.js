@@ -27,7 +27,7 @@ function Account() {
                 <div className={cx('avatar', 'l-5', 'col')}>
                     <input
                         className={cx('avatar-user')}
-                        style={{ backgroundImage: `url('')` }}
+                        style={{ backgroundImage: `url('https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/302746894_779700056428676_8587639890060082689_n.png?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=W3kEv5YLSIQAX9C_1cC&_nc_ht=scontent.fhan5-9.fna&oh=00_AfA8nJ_xiLbX3XjJ5qJo3C0aWKMFQAD7vyv52C286p8Fhw&oe=645D5DC8')`, backgroundSize:'cover' }}
                         ref={inputRef}
                         onChange={handleFileChange}
                     />

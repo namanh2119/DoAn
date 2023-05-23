@@ -32,6 +32,8 @@ function Login() {
                                 </button>
                             </Link>
                         </div>
+                        <div className={cx('register')}>Chưa có tài khoản? 
+                        <Link className={cx('register-link')} to='/register'>Đăng ký</Link></div>
                     </div>
                 </div>
             </div>

@@ -53,6 +53,7 @@
 .button-login {
     display: flex;
     justify-content: space-around;
+    margin-top: 20px;
 
     button {
         width: 150px;
@@ -86,34 +87,13 @@
     }
 }
 
-.login-social {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    button {
-        border: 1px solid #cfcfcf;
-        width: 70%;
-        border-radius: 24px;
-        margin: 2px 0;
-        padding: 8px 0;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        background-color: transparent;
-    }
-
-    .social-icon {
-        color: #646464;
-        margin: 0 12px;
-        font-size: 1.6rem;
-    }
-
-    span {
-        padding-left: 8px;
-        font-size: 1.6rem;
-        text-align: center;
-        width: 100%;
-        transform: translateX(-5%);
+.register {
+    text-align: center;
+    padding-top: 24px;
+    font-size: 1.8rem;
+    .register-link {
+        text-decoration: underline;
+        padding: 8px;
+        color: #1f6dff;
     }
 }

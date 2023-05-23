@@ -2,19 +2,19 @@ import classNames from "classnames/bind";
 import styles from './MenuFood.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const cx = classNames.bind(styles);
 
 function MenuFood() {
-
+    const [foods, setFoods] = useState([])
     useEffect(() => {
         fetch(`http://localhost:4000/foods`)
             .then(res => res.json())
             .then(res => {
                 console.log(res);
             })
-    }, []);
+    }, [foods]);
 
     return ( 
     <div className={cx('wapper')}>

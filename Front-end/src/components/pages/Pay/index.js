@@ -61,6 +61,35 @@ function Pay() {
                             <span className={cx('l-2')}>120000đ</span>
                             <div className={cx('delete-btn', 'l-2')}>Xóa</div>
                         </li>
+                        <li className={cx('pay__item', 'row', 'col')}>
+                            <div className={cx('pay__product', 'l-6')}>
+                                <div
+                                    className={cx('product__image')}
+                                    style={{
+                                        backgroundImage: `url('https://cdn.tgdd.vn/Files/2019/06/05/1171265/cach-lam-com-chien-trung-hat-com-toi-khong-bi-nhao-202203031523399671.jpg'`,
+                                    }}
+                                ></div>
+                                <div className={cx('product__info')}>
+                                    <p className={cx('product__name')}>Suất Cơm sườn nấu niêu</p>
+                                    <p className={cx('product__price')}>120000đ</p>
+                                </div>
+                            </div>
+                            <span className={cx('quantity__product', 'l-2')}>
+                                <FontAwesomeIcon
+                                    className={cx('quantity__icon')}
+                                    icon={faAngleLeft}
+                                    onClick={reduceQuantity}
+                                />
+                                <span>{quantity}</span>
+                                <FontAwesomeIcon
+                                    className={cx('quantity__icon')}
+                                    icon={faAngleRight}
+                                    onClick={increaseQuantity}
+                                />
+                            </span>
+                            <span className={cx('l-2')}>120000đ</span>
+                            <div className={cx('delete-btn', 'l-2')}>Xóa</div>
+                        </li>
                     </ul>
                 </div>
                 <div className={cx('pay__trans', 'row', 'col')}>

@@ -1,21 +1,16 @@
 const path = require('path');
 const express = require('express');
-const morgan = require('morgan');
-const handlebars = require('express-handlebars').engine;
 const app = express();
 const port = 4000;
+const errorHandler = require('./middleware/errorhandle')
 
-const route = require('./routes');
-const data = require('./config/Data');
+const data = require('./config');
 
 data.connect();
 
-app.use(morgan('combined'));
-
-app.engine('hbs', handlebars({ extname: '.hbs' }));
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources','views'));
-
-route(app);
+app.use(express.json());
+app.use("/api/foods", require("./routes/foodsRoutes"));
+app.use("/api/users", require("./routes/usersRoutes"));
+app.use(errorHandler)
 
 app.listen(port, () => console.log(`http://localhost:${port}`));

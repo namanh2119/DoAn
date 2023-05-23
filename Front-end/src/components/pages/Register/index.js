@@ -24,6 +24,10 @@ function Register() {
                         <input className={cx('input-login')} type="text" placeholder="Số điện thoại" />
                         <input className={cx('input-login')} type="text" placeholder="Email" />
                         <input className={cx('input-login')} type="text" placeholder="Địa chỉ" />
+                        <div className={cx('avatar')}>
+                            <button>Chọn file</button>
+                            <input type="text" placeholder='flides ảnh avatar' />
+                        </div>
                         <div className={cx('button-login')}>
                             <Link to='/login'><button>Đăng ký</button></Link>
                             <Link to='/'><button>Hủy</button></Link>
